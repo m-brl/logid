@@ -1,0 +1,16 @@
+[package]
+name = "logid"
+version = "0.1.0"
+edition = "2021"
+description = "Control Logitech HID++ mice (MX Master 4) from Linux"
+license = "MIT"
+
+[dependencies]
+libc = "0.2"
+
+[profile.release]
+opt-level = "s"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
